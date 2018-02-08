@@ -13,7 +13,7 @@ def read_json_file(json_file_name):
     '''(str) -> list of dict
     '''
     print('Reading JSON data from %s...' % json_file_name)
-    with open(json_file_name, 'r') as file_handle:
+    with open(json_file_name, mode='r', encoding="utf8") as file_handle:
         data = [loads(line) for line in file_handle]
     file_handle.close()
     print('%d items processed' % (len(data)))
