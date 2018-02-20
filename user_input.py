@@ -1,4 +1,4 @@
-from country_abbvs import *
+from CountryAbbvs import *
 from grapher import *
 
 
@@ -57,7 +57,8 @@ def main():
     '''
     # Read and get the starting JSON data.
     city_list_data = read_json_file(JSON_FILE)
-    abbvs = read_country_abbreviations(COUNTRIES_CSV_FILE)
+    countryAbbvs = CountryAbbvs
+    abbvs = countryAbbvs.read_country_abbreviations(COUNTRIES_CSV_FILE)
     while True:
         # Get the country and city weather JSON data.
         country_data = user_input_country(city_list_data, abbvs)
