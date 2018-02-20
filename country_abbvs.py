@@ -10,7 +10,7 @@ def read_country_abbreviations(file_name):
     REQ: file must be a .csv file
     '''
     # Open the file.
-    file = open(file_name, 'r')
+    file = open(file_name, 'r', encoding="utf8")
     # Create the result dictionary for the abbreviation mapping.
     abbreviations = dict()
     # Skip the header, then loop through each line in that file.
