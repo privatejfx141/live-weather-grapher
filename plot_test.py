@@ -11,5 +11,5 @@ for x in xvals:
     yvals.append(y)
 
 plt.plot(xvals,yvals)
-plt.xticks([-3*pi -2*pi -pi 0 pi 2*pi 3*pi])
+plt.xticks([-3*pi -2*pi -pi 0pi 2*pi 3*pi])
 plt.show()
