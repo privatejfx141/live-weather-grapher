@@ -27,6 +27,8 @@ def get_country_data(json_data, country):
     country_data = [item for item in json_data
                     if item['country'] == country]
     print('%d items processed' % (len(country_data)))
+    if len(country_data) == 0:
+        raise ValueError('No country data found in JSON data, even though country code was in abreviations')
     return country_data
 
 
@@ -202,6 +204,7 @@ if __name__ == '__main__':
     canada_cities = [city['name'] for city in canada_data]
     toronto_id = get_city_id(canada_data, 'Toronto')
     '''
-    toronto_id = 6167865
-    toronto_data = get_weather_data(toronto_id)
-    generate_temperature_graph(toronto_data)
+    # main_data = read_json_file(JSON_FILE)
+    # toronto_id = 6167865
+    # toronto_data = get_weather_data(toronto_id)
+    # generate_temperature_graph(toronto_data)

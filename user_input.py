@@ -10,6 +10,7 @@ def user_input_country(city_list_data, abbvs):
         # If name is not already an abbreviation, make it so.
         if len(name) != 2:
             name = abbvs[name]
+            print('Shortened user input to abbreviation: %s' % name)
         # Get the data.
         if name in abbvs.values():
             data = get_country_data(city_list_data, name)
@@ -21,7 +22,7 @@ def user_input_country(city_list_data, abbvs):
 def user_input_city(country_data):
     weather_data = None
 
-    city_list = get_list_of_cities(country_data)
+    city_list = get_list_of_cities(country_data) # grapher.py - why isn't the city and country search all one python method?
     dup_city_set = {city for city in city_list if city_list.count(city) > 1}
     while weather_data is None:
         name = input('Enter a city name: ')
@@ -56,8 +57,8 @@ def main():
     '''() -> NoneType
     '''
     # Read and get the starting JSON data.
-    city_list_data = read_json_file(JSON_FILE)
-    abbvs = read_country_abbreviations(COUNTRIES_CSV_FILE)
+    city_list_data = read_json_file(JSON_FILE) # grapher.py
+    abbvs = read_country_abbreviations(COUNTRIES_CSV_FILE) # country_abbvs.py
     while True:
         # Get the country and city weather JSON data.
         country_data = user_input_country(city_list_data, abbvs)
