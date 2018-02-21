@@ -4,23 +4,6 @@ Change to Object Oriented Programming
 Change to PEP-8 standard
 - https://www.python.org/dev/peps/pep-0008
 
+Add in graceful exit command
 
-
-OOP ToDo
-
--- Functions left to include or rewrite --
-user_input_country(city_list_data, abbvs):
-user_input_city(country_data):
-
--- Functions in OOP design --
-
-get_countries_dict():
-read_country_abbreviations(file_name):
-get_weather_data(city_id):
-read_json_file(json_file_name):
-get_country_data(json_data, country):
-get_list_of_cities(country_data):
-get_set_of_duplicate_cities(country_data):
-get_city_data(country_data, city):
-get_city_id(json_data, city):
-forecast(city_data, time):
+Allow user input for amount of days to graph
