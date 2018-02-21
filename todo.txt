@@ -1,0 +1,9 @@
+Change to Object Oriented Programming
+-https://www.ibm.com/developerworks/rational/library/content/RationalEdge/sep04/bell/
+
+Change to PEP-8 standard
+- https://www.python.org/dev/peps/pep-0008
+
+Add in graceful exit command
+
+Allow user input for amount of days to graph
