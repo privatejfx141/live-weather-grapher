@@ -10,6 +10,7 @@ for x in xvals:
     y = cos(x)
     yvals.append(y)
 
-plt.plot(xvals,yvals)
-plt.xticks([-3*pi -2*pi -pi 0 pi 2*pi 3*pi])
-plt.show()
+if __name__ == "__main__":
+    plt.plot(xvals,yvals)
+    plt.xticks([-3*pi -2*pi -pi 0 pi 2*pi 3*pi])
+    plt.show()
